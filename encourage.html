@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Encouragement</title>
+    <style>
+        /* General Page Styling */
+        body {
+            text-align: center;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff0f5; /* Lavender Blush */
+            color: #d63384; /* Cute Pink */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 1rem;
+            margin: 10px;
+            border: 2px solid #ffb6c1;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 300px; /* Prevents input from stretching too far */
+        }
+
+        button {
+            font-size: 1rem;
+            color: #fff;
+            background-color: #ff69b4; /* Pink button */
+            border: none;
+            border-radius: 10px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff1493; /* Darker pink on hover */
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #8b0000; /* Deep red */
+            word-wrap: break-word;
+        }
+
+        /* Responsive Design for Smaller Screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            input {
+                font-size: 1rem;
+                padding: 8px;
+            }
+
+            button {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+
+            #message {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hey there! 💖</h1>
+    <p>Enter your name to see a surprise!</p>
+    <input type="text" id="nameInput" placeholder="Type your name here...">
+    <br>
+    <button onclick="showMessage()">Click Me! 🌟</button>
+    <div id="message"></div>
+
+    <script>
+        function showMessage() {
+            const name = document.getElementById("nameInput").value.trim();
+            const messageBox = document.getElementById("message");
+
+            if (name) {
+                messageBox.innerHTML = `i know you are  liitle bit sad but Don't be sad, <b>${name}</b> 💖<br>I know you can do it! More and more good wishes for youu 🌟`;
+            } else {
+                messageBox.innerHTML = "Please enter your name first 😊";
+            }
+        }
+    </script>
+</body>
+</html>
